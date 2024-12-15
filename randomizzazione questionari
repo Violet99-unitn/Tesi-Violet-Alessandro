@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Randomizzazione</title>
+  <script>
+    function randomRedirect() {
+      // Inserisci i link ai due questionari
+      var controllo = "https://docs.google.com/forms/d/e/GRUPPO_CONTROLLO_LINK/viewform";
+      var sperimentale = "https://docs.google.com/forms/d/e/GRUPPO_SPERIMENTALE_LINK/viewform";
+
+      // Randomizza il redirezionamento
+      if (Math.random() < 0.5) {
+        window.location.href = controllo;
+      } else {
+        window.location.href = sperimentale;
+      }
+    }
+  </script>
+</head>
+<body onload="randomRedirect()">
+  <h1>Preparazione al questionario...</h1>
+  <p>Stai per essere indirizzato al questionario corretto.</p>
+  <p>Se non vieni rediretto automaticamente, <a href="#" onclick="randomRedirect()">clicca qui</a>.</p>
+</body>
+</html>
